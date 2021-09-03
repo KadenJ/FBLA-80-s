@@ -119,17 +119,22 @@ namespace space_invaders
                 }
             }
                         
-            if(enemyCount > 8)
+            if(enemyCount >= 8 )
             {
-                //need increase speed according to level
-                enemySpeed = 5;
 
-                
+                enemySpeed = 5 + level +1;
+
+                if(level == 5)
+                {
+                    enemySpeed = 11;
+                }
+                Console.WriteLine(enemySpeed);
+                                
             }
 
             if (enemyCount == InvaderArray.Length)
             {
-                win("you saved the planet!!" +
+                win("you saved the planet!! " +
                     "continue?");
             }
         }
@@ -156,8 +161,10 @@ namespace space_invaders
             }
             if (e.KeyCode == Keys.Enter && victory == true)
             {
+                victory = false;
                 removeAll();
                 nextLevel();
+                WorL.Text = "";
             }
         }
 
@@ -198,6 +205,7 @@ namespace space_invaders
             txtScore.Text = "Score: 0";
             score = 0;
             isGameOver = false;
+            victory = false;
 
             enemyBulletTimer = 300;
             enemySpeed = 5;
@@ -213,13 +221,22 @@ namespace space_invaders
         private void nextLevel()
         {
             enemyBulletTimer = 300;
-            enemySpeed = enemySpeed + 1;
+
+            if (victory == true)
+            {
+                enemySpeed += 1;
+            }else if(enemySpeed == 10)
+            {
+                enemySpeed = 10;
+            }
+            
             shooting = false;
 
+            removeAll();
             makeInvaders();
             GameTime.Start();
 
-            level = 1;
+            level += 1;
             enemyCount = 0;
         }
 
