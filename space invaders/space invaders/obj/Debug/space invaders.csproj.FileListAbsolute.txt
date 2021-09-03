@@ -1,0 +1,10 @@
+C:\Users\7542674\Desktop\FBLA\space invaders\space invaders\bin\Debug\space invaders.exe.config
+C:\Users\7542674\Desktop\FBLA\space invaders\space invaders\bin\Debug\space invaders.exe
+C:\Users\7542674\Desktop\FBLA\space invaders\space invaders\bin\Debug\space invaders.pdb
+C:\Users\7542674\Desktop\FBLA\space invaders\space invaders\obj\Debug\space invaders.csproj.AssemblyReference.cache
+C:\Users\7542674\Desktop\FBLA\space invaders\space invaders\obj\Debug\space_invaders.Form1.resources
+C:\Users\7542674\Desktop\FBLA\space invaders\space invaders\obj\Debug\space_invaders.Properties.Resources.resources
+C:\Users\7542674\Desktop\FBLA\space invaders\space invaders\obj\Debug\space invaders.csproj.GenerateResource.cache
+C:\Users\7542674\Desktop\FBLA\space invaders\space invaders\obj\Debug\space invaders.csproj.CoreCompileInputs.cache
+C:\Users\7542674\Desktop\FBLA\space invaders\space invaders\obj\Debug\space invaders.exe
+C:\Users\7542674\Desktop\FBLA\space invaders\space invaders\obj\Debug\space invaders.pdb
