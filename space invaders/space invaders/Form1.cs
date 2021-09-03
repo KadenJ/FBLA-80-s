@@ -25,11 +25,14 @@ namespace space_invaders
         bool shooting;
         bool isGameOver;
         bool victory;
+        bool menu = true;
 
         public Form1()
         {
             InitializeComponent();
-            gameSetup();
+            //change spot of gameSetup
+            //gameSetup();
+            menu = true;
         }
 
         private void txtScore_Click(object sender, EventArgs e)
@@ -166,6 +169,12 @@ namespace space_invaders
                 nextLevel();
                 WorL.Text = "";
             }
+            if(menu == true && e.KeyCode == Keys.Enter)
+            {
+                Mmenu.Dispose();
+                gameSetup();
+                menu = false;
+            }
         }
 
         private void makeInvaders()
@@ -274,6 +283,11 @@ namespace space_invaders
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -34,6 +34,7 @@ namespace space_invaders
             this.txtScore = new System.Windows.Forms.Label();
             this.GameTime = new System.Windows.Forms.Timer(this.components);
             this.WorL = new System.Windows.Forms.Label();
+            this.Mmenu = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,11 +50,11 @@ namespace space_invaders
             // txtScore
             // 
             this.txtScore.AutoSize = true;
-            this.txtScore.Font = new System.Drawing.Font("Mishmash BRK", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtScore.ForeColor = System.Drawing.SystemColors.Control;
             this.txtScore.Location = new System.Drawing.Point(12, 533);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(125, 16);
+            this.txtScore.Size = new System.Drawing.Size(88, 24);
             this.txtScore.TabIndex = 1;
             this.txtScore.Text = "Score: 0";
             this.txtScore.Click += new System.EventHandler(this.txtScore_Click);
@@ -66,12 +67,20 @@ namespace space_invaders
             // WorL
             // 
             this.WorL.AutoSize = true;
-            this.WorL.Font = new System.Drawing.Font("Mishmash BRK", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WorL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WorL.ForeColor = System.Drawing.SystemColors.Control;
             this.WorL.Location = new System.Drawing.Point(280, 272);
             this.WorL.Name = "WorL";
-            this.WorL.Size = new System.Drawing.Size(0, 16);
+            this.WorL.Size = new System.Drawing.Size(0, 24);
             this.WorL.TabIndex = 2;
+            // 
+            // Mmenu
+            // 
+            this.Mmenu.Location = new System.Drawing.Point(-3, -3);
+            this.Mmenu.Name = "Mmenu";
+            this.Mmenu.Size = new System.Drawing.Size(687, 570);
+            this.Mmenu.TabIndex = 4;
+            this.Mmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // Form1
             // 
@@ -79,6 +88,7 @@ namespace space_invaders
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(684, 561);
+            this.Controls.Add(this.Mmenu);
             this.Controls.Add(this.WorL);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.Player);
@@ -99,6 +109,7 @@ namespace space_invaders
         private System.Windows.Forms.Label txtScore;
         private System.Windows.Forms.Timer GameTime;
         private System.Windows.Forms.Label WorL;
+        private System.Windows.Forms.FlowLayoutPanel Mmenu;
     }
 }
 
