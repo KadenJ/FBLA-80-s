@@ -171,7 +171,7 @@ namespace space_invaders
             }
             if(menu == true && e.KeyCode == Keys.Enter)
             {
-                Mmenu.Dispose();
+                Mmenu.SendToBack();
                 gameSetup();
                 menu = false;
             }

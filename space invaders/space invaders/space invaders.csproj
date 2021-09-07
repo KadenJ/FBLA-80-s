@@ -89,5 +89,11 @@
   <ItemGroup>
     <None Include="Resources\c-users-anhar-ali-appdata-local-microsoft-windows-2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prompt.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
