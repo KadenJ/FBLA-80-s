@@ -120,6 +120,7 @@ namespace space_invaders
                         gameOver("you've been killed");
                     }
                 }
+
             }
                         
             if(enemyCount >= 8 )
@@ -161,6 +162,7 @@ namespace space_invaders
             {
                 removeAll();
                 gameSetup();
+                // send to scores
             }
             if (e.KeyCode == Keys.Enter && victory == true)
             {
@@ -174,6 +176,8 @@ namespace space_invaders
                 Mmenu.SendToBack();
                 gameSetup();
                 menu = false;
+                Title.SendToBack();
+                Prompt.SendToBack();
             }
         }
 
@@ -194,6 +198,7 @@ namespace space_invaders
                 InvaderArray[i].SizeMode = PictureBoxSizeMode.StretchImage;
                 this.Controls.Add(InvaderArray[i]);
                 left = left - 80;
+                InvaderArray[i].BringToFront();
             }
         }
 
@@ -258,6 +263,7 @@ namespace space_invaders
 
         private void win(string message)
         {
+            removeAll();
             victory = true;
             GameTime.Stop();
             WorL.Text = message;
@@ -288,6 +294,16 @@ namespace space_invaders
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Title_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void enter_Click(object sender, EventArgs e)
         {
 
         }

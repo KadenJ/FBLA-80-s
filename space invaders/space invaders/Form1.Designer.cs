@@ -34,13 +34,14 @@ namespace space_invaders
             this.GameTime = new System.Windows.Forms.Timer(this.components);
             this.WorL = new System.Windows.Forms.Label();
             this.Mmenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.Title = new System.Windows.Forms.PictureBox();
-            this.enter = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
+            this.Title = new System.Windows.Forms.PictureBox();
+            this.Prompt = new System.Windows.Forms.PictureBox();
+            this.GBG = new System.Windows.Forms.Panel();
             this.Mmenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Title)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Title)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Prompt)).BeginInit();
             this.SuspendLayout();
             // 
             // txtScore
@@ -63,9 +64,9 @@ namespace space_invaders
             // WorL
             // 
             this.WorL.AutoSize = true;
-            this.WorL.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.WorL.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.WorL.Font = new System.Drawing.Font("Mishmash BRK", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WorL.ForeColor = System.Drawing.SystemColors.Control;
+            this.WorL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.WorL.Location = new System.Drawing.Point(280, 272);
             this.WorL.Name = "WorL";
             this.WorL.Size = new System.Drawing.Size(0, 16);
@@ -74,30 +75,12 @@ namespace space_invaders
             // Mmenu
             // 
             this.Mmenu.Controls.Add(this.Title);
-            this.Mmenu.Controls.Add(this.enter);
-            this.Mmenu.Location = new System.Drawing.Point(0, -1);
+            this.Mmenu.Controls.Add(this.Prompt);
+            this.Mmenu.Location = new System.Drawing.Point(1, -1);
             this.Mmenu.Name = "Mmenu";
             this.Mmenu.Size = new System.Drawing.Size(684, 558);
             this.Mmenu.TabIndex = 4;
             this.Mmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            // 
-            // Title
-            // 
-            this.Title.Image = global::space_invaders.Properties.Resources.title;
-            this.Title.Location = new System.Drawing.Point(3, 3);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(681, 264);
-            this.Title.TabIndex = 0;
-            this.Title.TabStop = false;
-            // 
-            // enter
-            // 
-            this.enter.Image = global::space_invaders.Properties.Resources.prompt;
-            this.enter.Location = new System.Drawing.Point(3, 273);
-            this.enter.Name = "enter";
-            this.enter.Size = new System.Drawing.Size(681, 135);
-            this.enter.TabIndex = 1;
-            this.enter.TabStop = false;
             // 
             // Player
             // 
@@ -107,6 +90,31 @@ namespace space_invaders
             this.Player.Size = new System.Drawing.Size(65, 85);
             this.Player.TabIndex = 0;
             this.Player.TabStop = false;
+            // 
+            // Title
+            // 
+            this.Title.Image = global::space_invaders.Properties.Resources.title;
+            this.Title.Location = new System.Drawing.Point(3, 3);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(681, 222);
+            this.Title.TabIndex = 0;
+            this.Title.TabStop = false;
+            // 
+            // Prompt
+            // 
+            this.Prompt.Image = global::space_invaders.Properties.Resources.prompt;
+            this.Prompt.Location = new System.Drawing.Point(3, 231);
+            this.Prompt.Name = "Prompt";
+            this.Prompt.Size = new System.Drawing.Size(681, 105);
+            this.Prompt.TabIndex = 1;
+            this.Prompt.TabStop = false;
+            // 
+            // GBG
+            // 
+            this.GBG.Location = new System.Drawing.Point(12, 12);
+            this.GBG.Name = "GBG";
+            this.GBG.Size = new System.Drawing.Size(660, 545);
+            this.GBG.TabIndex = 5;
             // 
             // Form1
             // 
@@ -118,15 +126,16 @@ namespace space_invaders
             this.Controls.Add(this.WorL);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.Player);
+            this.Controls.Add(this.GBG);
             this.Name = "Form1";
             this.Text = "SI";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Keyisup);
             this.Mmenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Title)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Title)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Prompt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,7 +149,8 @@ namespace space_invaders
         private System.Windows.Forms.Label WorL;
         private System.Windows.Forms.FlowLayoutPanel Mmenu;
         private System.Windows.Forms.PictureBox Title;
-        private System.Windows.Forms.PictureBox enter;
+        private System.Windows.Forms.PictureBox Prompt;
+        private System.Windows.Forms.Panel GBG;
     }
 }
 
