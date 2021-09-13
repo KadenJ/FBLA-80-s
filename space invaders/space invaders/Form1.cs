@@ -77,6 +77,7 @@ namespace space_invaders
                     if (x.Bounds.IntersectsWith(Player.Bounds))
                     {
                         gameOver("You've been invaded!!");
+                        // go to scoreboard
                     }
 
                     foreach(Control y  in this.Controls)
@@ -118,6 +119,7 @@ namespace space_invaders
                     {
                         this.Controls.Remove(x);
                         gameOver("you've been killed");
+                        //go to scoreboard
                     }
                 }
 
@@ -331,4 +333,6 @@ namespace space_invaders
             
         }
     }
+
+    //scoreboard script
 }
