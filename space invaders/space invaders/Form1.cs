@@ -7,15 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+using System.IO;
 
 namespace space_invaders
 {
+
     public partial class Form1 : Form
     {
         bool goLeft, goRight;
         int playerSpeed = 12;
         int enemySpeed = 5;
-        int score = 0;
+        public static int score = 0;
         int enemyCount;
         int enemyBulletTimer = 300;
         int level;
@@ -27,6 +30,10 @@ namespace space_invaders
         bool victory;
         bool menu = true;
 
+        SoundPlayer bulletSound = new SoundPlayer(@"C:\Users\7542674\Desktop\FBLA\sounds\playerFire.wav");
+        //SoundPlayer BGMusic = new SoundPlayer(@"");    add file for BG sound
+        
+        
         public Form1()
         {
             InitializeComponent();
@@ -43,6 +50,8 @@ namespace space_invaders
         //basically update function from unity
         private void mainGameTimer(object sender, EventArgs e)
         {
+            //BGMusic.PlayLooping();    background music
+
             txtScore.Text = "Score: " + score;
 
             if (goLeft)
@@ -88,7 +97,10 @@ namespace space_invaders
                             {
                                 this.Controls.Remove(x);
                                 this.Controls.Remove(y);
-                                score += 1;
+                                //random score of 50 - 100
+                                Random rnd = new Random();
+                                int z = rnd.Next(50, 100);
+                                score += z;
                                 enemyCount += 1;
                                 shooting = false;
                             }                            
@@ -150,21 +162,26 @@ namespace space_invaders
             if(e.KeyCode == Keys.Left || e.KeyCode == Keys.A)
             {
                 goLeft = true;
+                
+                    
             }
             if(e.KeyCode == Keys.Right || e.KeyCode == Keys.S)
             {
                 goRight = true;
+                
             }
             if(e.KeyCode == Keys.Space && shooting == false)
             {
                 shooting = true;
                 makeBullet("bullet");
+                bulletSound.Play();
             }
-            if(e.KeyCode == Keys.Enter && isGameOver == true)
+            if (e.KeyCode == Keys.Enter && isGameOver == true)
             {
                 removeAll();
+                //send to scoreboard
+                //get rid of game setupup
                 gameSetup();
-                // send to scores
             }
             if (e.KeyCode == Keys.Enter && victory == true)
             {
@@ -260,7 +277,9 @@ namespace space_invaders
         {
             isGameOver = true;
             GameTime.Stop();
-            txtScore.Text = "Score: " + score + " " + message; 
+            txtScore.Text = "Score: " + score + " " + message;
+
+            //save score for scoreboard
         }
 
         private void win(string message)
@@ -330,9 +349,13 @@ namespace space_invaders
             this.Controls.Add(bullet);
             bullet.BringToFront();
 
-            
+            //SoundPlayer bulletSound = new SoundPlayer(@"C:\Users\7542674\Desktop\FBLA\sounds\playerFire.wav");
+            //bulletSound.Play();
         }
+
+        
     }
 
+    
     //scoreboard script
 }
