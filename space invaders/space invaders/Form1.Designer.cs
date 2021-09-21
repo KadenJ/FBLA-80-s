@@ -34,14 +34,14 @@ namespace space_invaders
             this.GameTime = new System.Windows.Forms.Timer(this.components);
             this.WorL = new System.Windows.Forms.Label();
             this.Mmenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.Player = new System.Windows.Forms.PictureBox();
             this.Title = new System.Windows.Forms.PictureBox();
             this.Prompt = new System.Windows.Forms.PictureBox();
+            this.Player = new System.Windows.Forms.PictureBox();
             this.GBG = new System.Windows.Forms.Panel();
             this.Mmenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Title)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Prompt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             this.SuspendLayout();
             // 
             // txtScore
@@ -82,15 +82,6 @@ namespace space_invaders
             this.Mmenu.TabIndex = 4;
             this.Mmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
-            // Player
-            // 
-            this.Player.Image = global::space_invaders.Properties.Resources.tank;
-            this.Player.Location = new System.Drawing.Point(275, 472);
-            this.Player.Name = "Player";
-            this.Player.Size = new System.Drawing.Size(65, 85);
-            this.Player.TabIndex = 0;
-            this.Player.TabStop = false;
-            // 
             // Title
             // 
             this.Title.Image = global::space_invaders.Properties.Resources.title;
@@ -108,6 +99,15 @@ namespace space_invaders
             this.Prompt.Size = new System.Drawing.Size(681, 105);
             this.Prompt.TabIndex = 1;
             this.Prompt.TabStop = false;
+            // 
+            // Player
+            // 
+            this.Player.Image = global::space_invaders.Properties.Resources.tank;
+            this.Player.Location = new System.Drawing.Point(275, 472);
+            this.Player.Name = "Player";
+            this.Player.Size = new System.Drawing.Size(65, 85);
+            this.Player.TabIndex = 0;
+            this.Player.TabStop = false;
             // 
             // GBG
             // 
@@ -133,9 +133,9 @@ namespace space_invaders
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Keyisup);
             this.Mmenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Title)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Prompt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

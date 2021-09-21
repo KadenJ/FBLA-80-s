@@ -180,8 +180,11 @@ namespace space_invaders
             {
                 removeAll();
                 //send to scoreboard
+                this.Hide();
+                ScoreBoard f2 = new ScoreBoard();
+                f2.Show();
                 //get rid of game setupup
-                gameSetup();
+                //gameSetup();
             }
             if (e.KeyCode == Keys.Enter && victory == true)
             {

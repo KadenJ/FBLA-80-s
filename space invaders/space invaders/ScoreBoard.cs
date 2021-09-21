@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,23 @@ namespace space_invaders
 {
     public partial class ScoreBoard : Form
     {
-        int score;
+        
         public ScoreBoard()
         {
             InitializeComponent();
+            
         }
 
         private void ScoreBoard_Load(object sender, EventArgs e)
         {
-            score = Form1.score;
+            var scores = new ArrayList();
+            scores.Add(10000);
+            scores.Add(9500);
+            scores.Add(9000);
+            scores.Add(5000);
+            scores.Add(3000);
+
+            
         }
     }
 }
