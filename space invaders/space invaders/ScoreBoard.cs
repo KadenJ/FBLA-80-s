@@ -21,7 +21,10 @@ namespace space_invaders
         {
             InitializeComponent();
             path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            
+            Console.WriteLine("1" + Score1.Text);
+            Console.WriteLine("2" + Score2.Text);
+            Console.WriteLine("5" + Score5.Text);
+
 
             int[] scores = new int[5] {10000, 9500, 9000, 5000, 3000};
             Array.Reverse(scores);
@@ -30,16 +33,20 @@ namespace space_invaders
             if (score >= scores[4] + 1 && score <= scores[3])
             {
                 scores[4] = score;
-            }else if(score >= scores[3] + 1 && score <= scores[2])
+            }
+            if(score >= scores[3] + 1 && score <= scores[2])
             {
                 scores[3] = score;
-            }else if(score >= scores[2] + 1 && score <= scores[1])
+            }
+            if(score >= scores[2] + 1 && score <= scores[1])
             {
                 scores[2] = score;
-            }else if (score >= scores[1] + 1 && score <= scores[0])
+            }
+            if (score >= scores[1] + 1 && score <= scores[0])
             {
                 scores[1] = score;
-            }else if (score>= scores[0] + 1)
+            }
+            if (score>= scores[0] + 1)
             {
                 //highscore
                 scores[0] = score;

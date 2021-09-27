@@ -64,6 +64,7 @@ namespace space_invaders
             // 
             // Score2
             // 
+            this.Score2.Enabled = false;
             this.Score2.Font = new System.Drawing.Font("Mishmash BRK", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Score2.Location = new System.Drawing.Point(394, 158);
             this.Score2.Name = "Score2";
@@ -73,6 +74,7 @@ namespace space_invaders
             // 
             // Score3
             // 
+            this.Score3.Enabled = false;
             this.Score3.Font = new System.Drawing.Font("Mishmash BRK", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Score3.Location = new System.Drawing.Point(394, 209);
             this.Score3.Name = "Score3";
@@ -82,6 +84,7 @@ namespace space_invaders
             // 
             // Score4
             // 
+            this.Score4.Enabled = false;
             this.Score4.Font = new System.Drawing.Font("Mishmash BRK", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Score4.Location = new System.Drawing.Point(394, 259);
             this.Score4.Name = "Score4";
@@ -91,6 +94,7 @@ namespace space_invaders
             // 
             // Score5
             // 
+            this.Score5.Enabled = false;
             this.Score5.Font = new System.Drawing.Font("Mishmash BRK", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Score5.Location = new System.Drawing.Point(394, 311);
             this.Score5.Name = "Score5";

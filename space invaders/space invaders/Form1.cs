@@ -36,7 +36,7 @@ namespace space_invaders
         //get file directory path
 
 
-        SoundPlayer BGMusic = new SoundPlayer(Path.Combine(System.IO.Path.GetFullPath(@"..\..\"), @"Resources\sounds\") + "BGMusic.mp3");    //add file for BG sound
+        //SoundPlayer BGMusic = new SoundPlayer(Path.Combine(System.IO.Path.GetFullPath(@"..\..\"), @"Resources\sounds\") + "BGMusic.wav");    //add file for BG sound
         
         SoundPlayer bulletSound = new SoundPlayer(Path.Combine(System.IO.Path.GetFullPath(@"..\..\"), @"Resources\sounds\") + "playerFire.wav");
         public Form1()
@@ -46,7 +46,8 @@ namespace space_invaders
             //change spot of gameSetup
             //gameSetup();
             menu = true;
-            
+
+            //BGMusic.PlayLooping();
         }
         
         private void txtScore_Click(object sender, EventArgs e)
@@ -57,7 +58,7 @@ namespace space_invaders
         //basically update function from unity
         private void mainGameTimer(object sender, EventArgs e)
         {
-            //BGMusic.PlayLooping();    background music
+            //BGMusic.PlayLooping();    //background music
 
             txtScore.Text = "Score: " + score;
 

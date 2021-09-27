@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\sounds\BGMusic.mp3" />
+    <Content Include="Resources\sounds\BGMusic.wav" />
     <Content Include="Resources\sounds\playerFire.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
