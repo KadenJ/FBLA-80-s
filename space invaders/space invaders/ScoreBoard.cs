@@ -14,17 +14,20 @@ namespace space_invaders
 {
     public partial class ScoreBoard : Form
     {
+        string path;
+
         int score = Form1.score;   
         public ScoreBoard()
         {
             InitializeComponent();
-
+            path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             
 
             int[] scores = new int[5] {10000, 9500, 9000, 5000, 3000};
             Array.Reverse(scores);
 
-            if(score >= scores[4] + 1 && score <= scores[3])
+            #region score check
+            if (score >= scores[4] + 1 && score <= scores[3])
             {
                 scores[4] = score;
             }else if(score >= scores[3] + 1 && score <= scores[2])
@@ -41,6 +44,7 @@ namespace space_invaders
                 //highscore
                 scores[0] = score;
             }
+            #endregion
 
             Score1.Text = scores[0].ToString();
             Score2.Text = scores[1].ToString();
@@ -50,15 +54,23 @@ namespace space_invaders
 
             //need to check if txt file exists
 
-            using (StreamWriter sw = new StreamWriter("SIScoreBoard.txt"))
+            using (StreamWriter sw = new StreamWriter(path + "SIScoreBoard.txt"))
             {
                 //should save array of scores
-                sw.WriteLine(scores);
+                for(int i = 0; i<scores.Length; i++)
+                {
+                    sw.WriteLine(scores[i]);
+                }
+                sw.Close();
             }
 
-            using (StreamReader sr = new StreamReader("SIScoreBoard.txt"))
+            using (StreamReader sr = new StreamReader(path + "SIScoreBoard.txt"))
             {
                 // load scoreboard
+                for(int i = 0; i<5; i++)
+                {
+                    
+                }
             }
         }
 

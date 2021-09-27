@@ -12,9 +12,10 @@ using System.IO;
 
 namespace space_invaders
 {
-
+    
     public partial class Form1 : Form
     {
+
         bool goLeft, goRight;
         int playerSpeed = 12;
         int enemySpeed = 5;
@@ -30,21 +31,27 @@ namespace space_invaders
         bool victory;
         bool menu = true;
 
-        SoundPlayer bulletSound = new SoundPlayer(@"C:\Users\7542674\Desktop\FBLA\sounds\playerFire.wav");
-        //SoundPlayer BGMusic = new SoundPlayer(@"");    add file for BG sound
+
+        // C:\Users\7542674\Desktop\FBLA\space invaders\space invaders\Resources\
+        //get file directory path
+
+
+        SoundPlayer BGMusic = new SoundPlayer(Path.Combine(System.IO.Path.GetFullPath(@"..\..\"), @"Resources\sounds\") + "BGMusic.mp3");    //add file for BG sound
         
-        
+        SoundPlayer bulletSound = new SoundPlayer(Path.Combine(System.IO.Path.GetFullPath(@"..\..\"), @"Resources\sounds\") + "playerFire.wav");
         public Form1()
         {
+            
             InitializeComponent();
             //change spot of gameSetup
             //gameSetup();
             menu = true;
+            
         }
-
+        
         private void txtScore_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         //basically update function from unity
@@ -73,6 +80,7 @@ namespace space_invaders
 
             foreach (Control x in this.Controls)
             {
+
                 if(x is PictureBox && (string)x.Tag == "Invaders")
                 {
                     x.Left += enemySpeed;
@@ -85,7 +93,7 @@ namespace space_invaders
 
                     if (x.Bounds.IntersectsWith(Player.Bounds))
                     {
-                        gameOver("You've been invaded!!");
+                        ////gameOver("You've been invaded!!");
                         // go to scoreboard
                     }
 
