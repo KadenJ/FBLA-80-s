@@ -108,7 +108,7 @@ namespace space_invaders
                                 this.Controls.Remove(y);
                                 //random score of 50 - 100
                                 Random rnd = new Random();
-                                int z = rnd.Next(50, 100);
+                                int z = rnd.Next(50, 150);
                                 score += z;
                                 enemyCount += 1;
                                 shooting = false;

@@ -60,7 +60,7 @@ namespace space_invaders
             this.Score1.Name = "Score1";
             this.Score1.Size = new System.Drawing.Size(226, 30);
             this.Score1.TabIndex = 1;
-            this.Score1.Text = "00000";
+            this.Score1.Text = "score 1";
             // 
             // Score2
             // 
@@ -70,7 +70,7 @@ namespace space_invaders
             this.Score2.Name = "Score2";
             this.Score2.Size = new System.Drawing.Size(226, 30);
             this.Score2.TabIndex = 2;
-            this.Score2.Text = "00000";
+            this.Score2.Text = "score 2";
             // 
             // Score3
             // 
@@ -80,7 +80,7 @@ namespace space_invaders
             this.Score3.Name = "Score3";
             this.Score3.Size = new System.Drawing.Size(226, 30);
             this.Score3.TabIndex = 3;
-            this.Score3.Text = "00000";
+            this.Score3.Text = "score 3";
             // 
             // Score4
             // 
@@ -90,7 +90,7 @@ namespace space_invaders
             this.Score4.Name = "Score4";
             this.Score4.Size = new System.Drawing.Size(226, 30);
             this.Score4.TabIndex = 4;
-            this.Score4.Text = "00000";
+            this.Score4.Text = "score 4";
             // 
             // Score5
             // 
@@ -100,7 +100,7 @@ namespace space_invaders
             this.Score5.Name = "Score5";
             this.Score5.Size = new System.Drawing.Size(226, 30);
             this.Score5.TabIndex = 5;
-            this.Score5.Text = "00000";
+            this.Score5.Text = "score 5";
             // 
             // textBox8
             // 

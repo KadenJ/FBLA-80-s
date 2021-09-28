@@ -15,18 +15,17 @@ namespace space_invaders
     public partial class ScoreBoard : Form
     {
         string path;
+        bool newGame;
 
         int score = Form1.score;   
         public ScoreBoard()
         {
             InitializeComponent();
             path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            Console.WriteLine("1" + Score1.Text);
-            Console.WriteLine("2" + Score2.Text);
-            Console.WriteLine("5" + Score5.Text);
 
-
+            
             int[] scores = new int[5] {10000, 9500, 9000, 5000, 3000};
+            Array.Sort(scores);
             Array.Reverse(scores);
 
             #region score check
@@ -53,15 +52,19 @@ namespace space_invaders
             }
             #endregion
 
+            #region assign scores
             Score1.Text = scores[0].ToString();
             Score2.Text = scores[1].ToString();
             Score3.Text = scores[2].ToString();
             Score4.Text = scores[3].ToString();
             Score5.Text = scores[4].ToString();
+            #endregion
 
             //need to check if txt file exists
 
-            using (StreamWriter sw = new StreamWriter(path + "SIScoreBoard.txt"))
+            //use json instead
+
+            /*using (StreamWriter sw = new StreamWriter(path + "SIScoreBoard.txt"))
             {
                 //should save array of scores
                 for(int i = 0; i<scores.Length; i++)
@@ -76,9 +79,10 @@ namespace space_invaders
                 // load scoreboard
                 for(int i = 0; i<5; i++)
                 {
-                    
+                    scores[i] = sr.Read();
                 }
-            }
+                sr.Close();
+            }*/
         }
 
         private void ScoreBoard_Load(object sender, EventArgs e)
