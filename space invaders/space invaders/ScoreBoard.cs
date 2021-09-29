@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Media;
 
 namespace space_invaders
 {
@@ -83,13 +84,36 @@ namespace space_invaders
                 }
                 sr.Close();
             }*/
+
+            
         }
+
 
         private void ScoreBoard_Load(object sender, EventArgs e)
         {
             
 
             
+        }
+
+        private void ScoreBoard_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void ScoreBoard_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.Hide();
+                Form1 MM = new Form1();
+                MM.Show();
+            }
+
+            if(e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }

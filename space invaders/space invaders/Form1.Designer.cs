@@ -67,7 +67,7 @@ namespace space_invaders
             this.WorL.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.WorL.Font = new System.Drawing.Font("Mishmash BRK", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WorL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.WorL.Location = new System.Drawing.Point(280, 272);
+            this.WorL.Location = new System.Drawing.Point(162, 233);
             this.WorL.Name = "WorL";
             this.WorL.Size = new System.Drawing.Size(0, 16);
             this.WorL.TabIndex = 2;
@@ -76,7 +76,7 @@ namespace space_invaders
             // 
             this.Mmenu.Controls.Add(this.Title);
             this.Mmenu.Controls.Add(this.Prompt);
-            this.Mmenu.Location = new System.Drawing.Point(1, -1);
+            this.Mmenu.Location = new System.Drawing.Point(1, 4);
             this.Mmenu.Name = "Mmenu";
             this.Mmenu.Size = new System.Drawing.Size(684, 558);
             this.Mmenu.TabIndex = 4;
@@ -111,7 +111,8 @@ namespace space_invaders
             // 
             // GBG
             // 
-            this.GBG.Location = new System.Drawing.Point(12, 12);
+            this.GBG.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.GBG.Location = new System.Drawing.Point(12, 4);
             this.GBG.Name = "GBG";
             this.GBG.Size = new System.Drawing.Size(660, 545);
             this.GBG.TabIndex = 5;
@@ -121,7 +122,7 @@ namespace space_invaders
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(684, 560);
+            this.ClientSize = new System.Drawing.Size(704, 560);
             this.Controls.Add(this.Mmenu);
             this.Controls.Add(this.WorL);
             this.Controls.Add(this.txtScore);

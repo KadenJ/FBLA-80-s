@@ -104,6 +104,7 @@ namespace space_invaders
             // 
             // textBox8
             // 
+            this.textBox8.Enabled = false;
             this.textBox8.Font = new System.Drawing.Font("Mishmash BRK", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.Location = new System.Drawing.Point(212, 106);
             this.textBox8.Name = "textBox8";
@@ -112,6 +113,7 @@ namespace space_invaders
             // 
             // textBox9
             // 
+            this.textBox9.Enabled = false;
             this.textBox9.Font = new System.Drawing.Font("Mishmash BRK", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(212, 158);
             this.textBox9.Name = "textBox9";
@@ -120,6 +122,7 @@ namespace space_invaders
             // 
             // textBox10
             // 
+            this.textBox10.Enabled = false;
             this.textBox10.Font = new System.Drawing.Font("Mishmash BRK", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.Location = new System.Drawing.Point(212, 209);
             this.textBox10.Name = "textBox10";
@@ -128,6 +131,7 @@ namespace space_invaders
             // 
             // textBox11
             // 
+            this.textBox11.Enabled = false;
             this.textBox11.Font = new System.Drawing.Font("Mishmash BRK", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.Location = new System.Drawing.Point(212, 259);
             this.textBox11.Name = "textBox11";
@@ -136,6 +140,7 @@ namespace space_invaders
             // 
             // textBox12
             // 
+            this.textBox12.Enabled = false;
             this.textBox12.Font = new System.Drawing.Font("Mishmash BRK", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox12.Location = new System.Drawing.Point(212, 311);
             this.textBox12.Name = "textBox12";
@@ -158,9 +163,12 @@ namespace space_invaders
             this.Controls.Add(this.Score2);
             this.Controls.Add(this.Score1);
             this.Controls.Add(this.ScoreTitle);
+            this.Enabled = false;
             this.Name = "ScoreBoard";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.ScoreBoard_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ScoreBoard_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ScoreBoard_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

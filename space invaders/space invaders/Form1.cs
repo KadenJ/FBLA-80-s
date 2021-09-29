@@ -46,6 +46,7 @@ namespace space_invaders
             //change spot of gameSetup
             //gameSetup();
             menu = true;
+            
 
             //BGMusic.PlayLooping();
         }
@@ -168,6 +169,12 @@ namespace space_invaders
 
         private void keyisdown(object sender, KeyEventArgs e)
         {
+            if(e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+                
+            }
+
             if(e.KeyCode == Keys.Left || e.KeyCode == Keys.A)
             {
                 goLeft = true;
