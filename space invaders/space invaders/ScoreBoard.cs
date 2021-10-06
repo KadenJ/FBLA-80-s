@@ -16,76 +16,116 @@ namespace space_invaders
     public partial class ScoreBoard : Form
     {
         string path;
-        bool newGame;
+        //bool newGame;
 
-        int score = Form1.score;   
+        int score = Form1.score;
+
+
         public ScoreBoard()
         {
             InitializeComponent();
             path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
+
+            int[] scores = new int[5] { 10000, 9500, 9000, 5000, 3000 };
+
+            //load scores here
             
-            int[] scores = new int[5] {10000, 9500, 9000, 5000, 3000};
+            if (File.Exists(path + @"\SIScoreboard.txt"))
+            {
+                //doesn't work
+                
+
+            }
+             
+
+
             Array.Sort(scores);
             Array.Reverse(scores);
 
             #region score check
-            if (score >= scores[4] + 1 && score <= scores[3])
-            {
-                scores[4] = score;
-            }
-            if(score >= scores[3] + 1 && score <= scores[2])
-            {
-                scores[3] = score;
-            }
-            if(score >= scores[2] + 1 && score <= scores[1])
-            {
-                scores[2] = score;
-            }
-            if (score >= scores[1] + 1 && score <= scores[0])
-            {
-                scores[1] = score;
-            }
-            if (score>= scores[0] + 1)
-            {
-                //highscore
-                scores[0] = score;
-            }
-            #endregion
-
-            #region assign scores
-            Score1.Text = scores[0].ToString();
-            Score2.Text = scores[1].ToString();
-            Score3.Text = scores[2].ToString();
-            Score4.Text = scores[3].ToString();
-            Score5.Text = scores[4].ToString();
-            #endregion
-
-            //need to check if txt file exists
-
-            //use json instead
-
-            /*using (StreamWriter sw = new StreamWriter(path + "SIScoreBoard.txt"))
-            {
-                //should save array of scores
-                for(int i = 0; i<scores.Length; i++)
+                //load scoers
+                if (score >= scores[4] + 1 && score <= scores[3])
                 {
-                    sw.WriteLine(scores[i]);
+                    scores[4] = score;
                 }
-                sw.Close();
+                if (score >= scores[3] + 1 && score <= scores[2])
+                {
+                    scores[3] = score;
+                }
+                if (score >= scores[2] + 1 && score <= scores[1])
+                {
+                    scores[2] = score;
+                }
+                if (score >= scores[1] + 1 && score <= scores[0])
+                {
+                    scores[1] = score;
+                }
+                if (score >= scores[0] + 1)
+                {
+                    //highscore
+                    scores[0] = score;
+                }
+            
+            
+            Array.Sort(scores);
+            Array.Reverse(scores);
+
+            #endregion
+
+            
+
+            #region save scores
+            using (StreamWriter sw = new StreamWriter(path + @"\SIScoreBoard.txt"))
+            {
+
+                //saves properly
+                for (int i = 0; i < scores.Length; i++)
+                {
+                    sw.WriteLine(Convert.ToInt32(scores[i]));
+                }
+
             }
 
-            using (StreamReader sr = new StreamReader(path + "SIScoreBoard.txt"))
+            /*using (StreamReader sr = new StreamReader(path + @"\SIScoreBoard.txt"))
             {
                 // load scoreboard
-                for(int i = 0; i<5; i++)
+                
+                for (int i = 0; i<scores.Length; i++)
                 {
                     scores[i] = sr.Read();
                 }
                 sr.Close();
             }*/
 
-            
+            #endregion
+
+            /* int[] scores = new int[5] {10000, 9500, 9000, 5000, 3000};
+             Array.Sort(scores);
+             Array.Reverse(scores);*/
+
+
+
+            #region assign scores
+            /*Score1.Text = scores2[0];
+            Score2.Text = scores2[1];
+            Score3.Text = scores2[2];
+            Score4.Text = scores2[3];
+            Score5.Text = scores2[4];*/
+
+            Score1.Text = scores[0].ToString();
+            Score2.Text = scores[1].ToString();
+            Score3.Text = scores[2].ToString();
+            Score4.Text = scores[3].ToString();
+            Score5.Text = scores[4].ToString();
+
+            for(int i = 0; i<scores.Length; i++)
+            {
+                //Console.WriteLine(scores[i]);
+            }
+            #endregion           
+
+
         }
 
 
