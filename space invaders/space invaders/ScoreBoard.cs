@@ -34,7 +34,14 @@ namespace space_invaders
             if (File.Exists(path + @"\SIScoreboard.txt"))
             {
                 //doesn't work
-                
+                using (StreamReader sr = new StreamReader(path + @"\SIScoreBoard.txt"))
+                {
+                    for(int i = 0; i < scores.Length; i++)
+                    {
+                        scores[i] = int.Parse(sr.ReadLine());
+                        //scores[i] = sr.Read();
+                    }
+                }
 
             }
              
@@ -84,7 +91,7 @@ namespace space_invaders
                 {
                     sw.WriteLine(Convert.ToInt32(scores[i]));
                 }
-
+                sw.Close();
             }
 
             /*using (StreamReader sr = new StreamReader(path + @"\SIScoreBoard.txt"))
