@@ -66,6 +66,13 @@ namespace space_invaders
             if (goLeft)
             {
                 Player.Left -= playerSpeed;
+                // add boundary 
+
+                if(Player.Bounds.IntersectsWith(Boundary1.Bounds))
+                {
+                    Player.Left = 0;
+                }
+                
             }
             if (goRight)
             {

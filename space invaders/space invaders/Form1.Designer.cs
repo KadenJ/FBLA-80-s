@@ -38,10 +38,13 @@ namespace space_invaders
             this.Prompt = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
             this.GBG = new System.Windows.Forms.Panel();
+            this.Boundary1 = new System.Windows.Forms.PictureBox();
             this.Mmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Title)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Prompt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
+            this.GBG.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Boundary1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtScore
@@ -76,7 +79,8 @@ namespace space_invaders
             // 
             this.Mmenu.Controls.Add(this.Title);
             this.Mmenu.Controls.Add(this.Prompt);
-            this.Mmenu.Location = new System.Drawing.Point(1, 4);
+            this.Mmenu.Enabled = false;
+            this.Mmenu.Location = new System.Drawing.Point(8, 4);
             this.Mmenu.Name = "Mmenu";
             this.Mmenu.Size = new System.Drawing.Size(684, 558);
             this.Mmenu.TabIndex = 4;
@@ -108,14 +112,25 @@ namespace space_invaders
             this.Player.Size = new System.Drawing.Size(65, 85);
             this.Player.TabIndex = 0;
             this.Player.TabStop = false;
+            this.Player.Tag = "Player";
             // 
             // GBG
             // 
             this.GBG.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.GBG.Controls.Add(this.Boundary1);
             this.GBG.Location = new System.Drawing.Point(12, 4);
             this.GBG.Name = "GBG";
             this.GBG.Size = new System.Drawing.Size(660, 545);
             this.GBG.TabIndex = 5;
+            // 
+            // Boundary1
+            // 
+            this.Boundary1.Location = new System.Drawing.Point(-14, 468);
+            this.Boundary1.Name = "Boundary1";
+            this.Boundary1.Size = new System.Drawing.Size(17, 85);
+            this.Boundary1.TabIndex = 6;
+            this.Boundary1.TabStop = false;
+            this.Boundary1.Tag = "Player";
             // 
             // Form1
             // 
@@ -137,6 +152,8 @@ namespace space_invaders
             ((System.ComponentModel.ISupportInitialize)(this.Title)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Prompt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
+            this.GBG.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Boundary1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,6 +169,7 @@ namespace space_invaders
         private System.Windows.Forms.PictureBox Title;
         private System.Windows.Forms.PictureBox Prompt;
         private System.Windows.Forms.Panel GBG;
+        private System.Windows.Forms.PictureBox Boundary1;
     }
 }
 

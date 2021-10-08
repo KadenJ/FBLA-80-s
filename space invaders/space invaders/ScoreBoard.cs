@@ -51,6 +51,14 @@ namespace space_invaders
             Array.Reverse(scores);
 
             #region score check
+
+            for(int i = 0; i < scores.Length; i++)
+            {
+                // make a list 
+                // put scores into list
+                //check list scores
+                //remove lowest score
+            }
                 //load scoers
                 if (score >= scores[4] + 1 && score <= scores[3])
                 {
@@ -73,7 +81,7 @@ namespace space_invaders
                     //highscore
                     scores[0] = score;
                 }
-            
+
             
             Array.Sort(scores);
             Array.Reverse(scores);
