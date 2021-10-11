@@ -52,34 +52,29 @@ namespace space_invaders
 
             #region score check
 
-            for(int i = 0; i < scores.Length; i++)
-            {
-                // make a list 
-                // put scores into list
-                //check list scores
-                //remove lowest score
-            }
+            
                 //load scoers
                 if (score >= scores[4] + 1 && score <= scores[3])
                 {
                     scores[4] = score;
+                    
                 }
                 if (score >= scores[3] + 1 && score <= scores[2])
                 {
-                    scores[3] = score;
+                    scores[4] = score;
                 }
                 if (score >= scores[2] + 1 && score <= scores[1])
                 {
-                    scores[2] = score;
+                    scores[4] = score;
                 }
                 if (score >= scores[1] + 1 && score <= scores[0])
                 {
-                    scores[1] = score;
+                    scores[4] = score;
                 }
                 if (score >= scores[0] + 1)
                 {
                     //highscore
-                    scores[0] = score;
+                    scores[4] = score;
                 }
 
             

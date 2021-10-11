@@ -70,12 +70,17 @@ namespace space_invaders
 
                 if(Player.Bounds.IntersectsWith(Boundary1.Bounds))
                 {
-                    Player.Left = 0;
+                    Player.Left = 630;
                 }
                 
             }
             if (goRight)
             {
+                if (Player.Bounds.IntersectsWith(Boundary2.Bounds))
+                {
+                    Player.Left = 0;
+                }
+
                 Player.Left += playerSpeed;
             }
 
@@ -89,9 +94,11 @@ namespace space_invaders
 
             foreach (Control x in this.Controls)
             {
+                
 
                 if(x is PictureBox && (string)x.Tag == "Invaders")
                 {
+                    
                     x.Left += enemySpeed;
 
                     if(x.Left > 730)
@@ -228,6 +235,8 @@ namespace space_invaders
 
         private void makeInvaders()
         {
+            // randomize aliens
+
             InvaderArray = new PictureBox[15];
 
             int left = 0;

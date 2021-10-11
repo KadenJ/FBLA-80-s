@@ -34,16 +34,18 @@ namespace space_invaders
             this.GameTime = new System.Windows.Forms.Timer(this.components);
             this.WorL = new System.Windows.Forms.Label();
             this.Mmenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.GBG = new System.Windows.Forms.Panel();
             this.Title = new System.Windows.Forms.PictureBox();
             this.Prompt = new System.Windows.Forms.PictureBox();
+            this.Boundary2 = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
-            this.GBG = new System.Windows.Forms.Panel();
             this.Boundary1 = new System.Windows.Forms.PictureBox();
             this.Mmenu.SuspendLayout();
+            this.GBG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Title)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Prompt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Boundary2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
-            this.GBG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Boundary1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,6 +88,15 @@ namespace space_invaders
             this.Mmenu.TabIndex = 4;
             this.Mmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
+            // GBG
+            // 
+            this.GBG.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.GBG.Controls.Add(this.Boundary1);
+            this.GBG.Location = new System.Drawing.Point(12, 4);
+            this.GBG.Name = "GBG";
+            this.GBG.Size = new System.Drawing.Size(660, 545);
+            this.GBG.TabIndex = 5;
+            // 
             // Title
             // 
             this.Title.Image = global::space_invaders.Properties.Resources.title;
@@ -104,6 +115,15 @@ namespace space_invaders
             this.Prompt.TabIndex = 1;
             this.Prompt.TabStop = false;
             // 
+            // Boundary2
+            // 
+            this.Boundary2.Location = new System.Drawing.Point(698, 477);
+            this.Boundary2.Name = "Boundary2";
+            this.Boundary2.Size = new System.Drawing.Size(10, 85);
+            this.Boundary2.TabIndex = 7;
+            this.Boundary2.TabStop = false;
+            this.Boundary2.Tag = "Player";
+            // 
             // Player
             // 
             this.Player.Image = global::space_invaders.Properties.Resources.tank;
@@ -113,15 +133,6 @@ namespace space_invaders
             this.Player.TabIndex = 0;
             this.Player.TabStop = false;
             this.Player.Tag = "Player";
-            // 
-            // GBG
-            // 
-            this.GBG.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.GBG.Controls.Add(this.Boundary1);
-            this.GBG.Location = new System.Drawing.Point(12, 4);
-            this.GBG.Name = "GBG";
-            this.GBG.Size = new System.Drawing.Size(660, 545);
-            this.GBG.TabIndex = 5;
             // 
             // Boundary1
             // 
@@ -137,9 +148,10 @@ namespace space_invaders
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(704, 560);
+            this.ClientSize = new System.Drawing.Size(706, 560);
             this.Controls.Add(this.Mmenu);
             this.Controls.Add(this.WorL);
+            this.Controls.Add(this.Boundary2);
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.Player);
             this.Controls.Add(this.GBG);
@@ -149,10 +161,11 @@ namespace space_invaders
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Keyisup);
             this.Mmenu.ResumeLayout(false);
+            this.GBG.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Title)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Prompt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Boundary2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
-            this.GBG.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Boundary1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -170,6 +183,7 @@ namespace space_invaders
         private System.Windows.Forms.PictureBox Prompt;
         private System.Windows.Forms.Panel GBG;
         private System.Windows.Forms.PictureBox Boundary1;
+        private System.Windows.Forms.PictureBox Boundary2;
     }
 }
 
