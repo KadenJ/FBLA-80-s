@@ -31,20 +31,12 @@ namespace space_invaders
         bool victory;
         bool menu = true;
 
-
-        // C:\Users\7542674\Desktop\FBLA\space invaders\space invaders\Resources\
-        //get file directory path
-
-
-        //SoundPlayer BGMusic = new SoundPlayer(Path.Combine(System.IO.Path.GetFullPath(@"..\..\"), @"Resources\sounds\") + "BGMusic.wav");    //add file for BG sound
         
         SoundPlayer bulletSound = new SoundPlayer(Path.Combine(System.IO.Path.GetFullPath(@"..\..\"), @"Resources\sounds\") + "playerFire.wav");
         public Form1()
         {
             
             InitializeComponent();
-            //change spot of gameSetup
-            //gameSetup();
             menu = true;
             
 
@@ -66,7 +58,6 @@ namespace space_invaders
             if (goLeft)
             {
                 Player.Left -= playerSpeed;
-                // add boundary 
 
                 if(Player.Bounds.IntersectsWith(Boundary1.Bounds))
                 {
@@ -109,8 +100,8 @@ namespace space_invaders
 
                     if (x.Bounds.IntersectsWith(Player.Bounds))
                     {
-                        ////gameOver("You've been invaded!!");
-                        // go to scoreboard
+                        gameOver("You've been invaded!!");
+                        
                     }
 
                     foreach(Control y  in this.Controls)
@@ -213,8 +204,7 @@ namespace space_invaders
                 this.Hide();
                 ScoreBoard f2 = new ScoreBoard();
                 f2.Show();
-                //get rid of game setupup
-                //gameSetup();
+
             }
             if (e.KeyCode == Keys.Enter && victory == true)
             {
@@ -243,9 +233,20 @@ namespace space_invaders
 
             for(int i = 0; i < InvaderArray.Length; i++)
             {
+                Random rnd = new Random();
+                int x = rnd.Next(1, 2);
+
                 InvaderArray[i] = new PictureBox();
                 InvaderArray[i].Size = new Size(60, 50);
-                InvaderArray[i].Image = Properties.Resources.aliean;
+                //testing random aliean skin
+                if (x == 2)
+                {
+                    InvaderArray[i].Image = Properties.Resources.aliean;
+                }
+                else
+                {
+                    InvaderArray[i].Image = Properties.Resources.Saliean;
+                }
                 InvaderArray[i].Top = 5;
                 InvaderArray[i].Tag = "Invaders";
                 InvaderArray[i].Left = left;
