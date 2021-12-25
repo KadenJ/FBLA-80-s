@@ -12,3 +12,21 @@ C:\Users\7542674\Desktop\FBLA\space invaders\space invaders\obj\Debug\space inva
 C:\Users\7542674\Desktop\FBLA\space invaders\space invaders\bin\Debug\Newtonsoft.Json.dll
 C:\Users\7542674\Desktop\FBLA\space invaders\space invaders\bin\Debug\Newtonsoft.Json.xml
 C:\Users\7542674\Desktop\FBLA\space invaders\space invaders\obj\Debug\space invaders.csproj.CopyComplete
+E:\work game\FBLA-80-s\space invaders\space invaders\bin\Debug\space invaders.exe.config
+E:\work game\FBLA-80-s\space invaders\space invaders\bin\Debug\space invaders.exe.manifest
+E:\work game\FBLA-80-s\space invaders\space invaders\bin\Debug\space invaders.application
+E:\work game\FBLA-80-s\space invaders\space invaders\bin\Debug\space invaders.exe
+E:\work game\FBLA-80-s\space invaders\space invaders\bin\Debug\space invaders.pdb
+E:\work game\FBLA-80-s\space invaders\space invaders\bin\Debug\Newtonsoft.Json.dll
+E:\work game\FBLA-80-s\space invaders\space invaders\bin\Debug\Newtonsoft.Json.xml
+E:\work game\FBLA-80-s\space invaders\space invaders\obj\Debug\space invaders.csprojAssemblyReference.cache
+E:\work game\FBLA-80-s\space invaders\space invaders\obj\Debug\space_invaders.Form1.resources
+E:\work game\FBLA-80-s\space invaders\space invaders\obj\Debug\space_invaders.Properties.Resources.resources
+E:\work game\FBLA-80-s\space invaders\space invaders\obj\Debug\space_invaders.ScoreBoard.resources
+E:\work game\FBLA-80-s\space invaders\space invaders\obj\Debug\space invaders.csproj.GenerateResource.cache
+E:\work game\FBLA-80-s\space invaders\space invaders\obj\Debug\space invaders.csproj.CoreCompileInputs.cache
+E:\work game\FBLA-80-s\space invaders\space invaders\obj\Debug\space invaders.exe.manifest
+E:\work game\FBLA-80-s\space invaders\space invaders\obj\Debug\space invaders.application
+E:\work game\FBLA-80-s\space invaders\space invaders\obj\Debug\space invaders.csproj.CopyComplete
+E:\work game\FBLA-80-s\space invaders\space invaders\obj\Debug\space invaders.exe
+E:\work game\FBLA-80-s\space invaders\space invaders\obj\Debug\space invaders.pdb
